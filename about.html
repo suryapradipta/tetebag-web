@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Our Story - tetebag</title>
+
+      <!-- external stylesheet -->
+      <link rel="stylesheet" href="style.css">
+
+      <!-- icon pack -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+      <!-- jquery cdn -->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+      <!-- tweenmax (greensock) cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="animate.css">
+      <script src="wow.min.js"></script>
+</head>
+<body>
+
+      <!-- NAVIGATION SECTION STARTS -->
+
+      <div class="nav">
+            <div class="menu-open">
+                  <ion-icon name="menu"></ion-icon>
+            </div>
+            <div class="brand">
+                  <span><a href="index.html">tetebag</a></span>
+            </div>
+            <div class="cart">
+                  <ion-icon name="cart"></ion-icon>
+            </div>
+            <div class="menu">
+                  <div class="menu-close">
+                        <ion-icon name="close"></ion-icon>
+                  </div>
+                  <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collection.html">Collection</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="about.html">Our story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="testimony.html">testimony</a></li>
+                  </ul>
+                  <div class="media-menu">
+                        <ul>
+                              <li><ion-icon name="logo-facebook"></ion-icon></li>
+                              <li><ion-icon name="logo-instagram"></ion-icon></li>
+                              <li><ion-icon name="logo-twitter"></ion-icon></li>
+                              <li><ion-icon name="logo-youtube"></ion-icon></li>
+                        </ul>
+                  </div>
+            </div>
+      </div>
+
+      <!-- NAVIGATION SECTION ENDS -->
+
+      <!-- DATA SECTION STARTS -->
+      <div class="about-header">
+            <div class="container-fluid data wow fadeInUp">
+                  <h1 id="data-title">Our story</h1>
+            </div>
+
+            <div class="content">
+                  <p class="wow fadeInUp6">My vision and mission in creating this website is make my business a brand and create a company and improving efficiency and effectiveness in the marketing process.</p>
+
+                  <p id="blockquote" class="wow fadeInUp8">The reason I made this business was that I had a dream of having a brand and a company, so I started this business since high school until now.</p>
+
+                  <p class="wow fadeInUp6">I hope visitors can use this bag to become a fashion, not just a substitute for plastic bags.
+                  </p>
+            </div>
+      </div>
+      <!-- DATA SECTION ENDS -->
+
+      <!-- FOOTER SECTION STARTS -->
+
+      <div class="container-fluid footer">
+            <div class="section container">
+                  <footer>
+                        <div class="row">
+                              <div class="flex-one block">
+                                    <p>Badung, Bali
+                                    <br>
+                                    Indonesia. 2018
+                                    </p>
+                              </div>
+                              <div class="flex-one block">
+                                    <p>FAQs
+                                    <br>
+                                    Return Policy
+                                    <br>
+                                    Shipping</p>
+                              </div>
+                              <div class="flex-one block">
+                                    <p>Careers
+                                    <br>
+                                    Community
+                                    <br>
+                                    Wholesale</p>
+                              </div>
+                              <div class="flex-one block">
+                                    <div class="media">
+                                          <ul>
+                                                <li><ion-icon name="logo-facebook"></ion-icon></li>
+                                                <li><ion-icon name="logo-instagram"></ion-icon></li>
+                                                <li><ion-icon name="logo-twitter"></ion-icon></li>
+                                                <li><ion-icon name="logo-youtube"></ion-icon></li>
+                                          </ul>
+                                    </div>
+                              </div>
+                        </div>
+                  </footer>
+            </div>
+      </div>
+
+      <!-- FOOTER SECTION ENDS -->
+
+      <script>
+
+      //Scroll reveal animations
+
+      new WOW().init();
+
+      //Scroll activated background change
+      $(document).scroll(function() {
+            var $nav = $(".nav");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      });
+
+      //Toggle MENU
+
+      var t1 = new TimelineMax({paused: true});
+      t1.to(".menu", 0.5, {
+            left: "0%",
+            ease: Power2.easeInOut
+      });
+
+      t1.reverse();
+      $(document).on("click", ".menu-open", function() {
+            t1.reversed(!t1.reversed());
+      });
+      $(document).on("click", ".menu-close", function() {
+            t1.reversed(!t1.reversed());
+      });
+
+      </script>
+</body>
+</html>
